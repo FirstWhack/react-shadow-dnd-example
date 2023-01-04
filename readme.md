@@ -1,1 +1,1 @@
-https://firstwhack.github.io/react-shadw-dnd-example/
+https://firstwhack.github.io/react-shadow-dnd-example/
