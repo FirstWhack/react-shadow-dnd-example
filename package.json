@@ -1,5 +1,6 @@
 {
-  "name": "shadow",
+  "name": "react-shadow-dnd-example",
+  "homepage": "/react-shadow-dnd-example",
   "main": "src/index.tsx",
   "description": "colors",
   "private": true,
