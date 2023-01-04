@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.e51ca370.css","mappings":"AAAA,SAII,UAAY,CAHZ,YAAa,CAEb,oBAAqB,CAErB,YAAa,CAHb,WAIJ","sources":["styles.css"],"sourcesContent":[".blender {\n    height: 12rem;\n    width: 12rem;\n    margin-bottom: 1.5rem;\n    color: white;\n    padding: 1rem;\n}"],"names":[],"sourceRoot":""}
