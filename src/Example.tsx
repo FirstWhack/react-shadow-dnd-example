@@ -1,21 +1,12 @@
-import type { CSSProperties, FC } from 'react';
+import type { FC } from 'react';
 import root from 'react-shadow';
 import { Blender } from './Blender';
 import { Box } from './Color';
 import './styles.css';
-
+// get file as string without ejecting from CRA
 // in theory this is some kind of string received at runtime
-// styles for the encapsulated shadowRoot would never be available at compile time
-const shadowBlenderStyles: CSSProperties = {
-  // important to note - rem will be the same value in shadow/light dom
-  height: '14rem',
-  width: '14rem',
-  marginBottom: '1.5rem',
-  color: 'white',
-  border: '5px solid purple',
-  padding: '1rem',
-  fontSize: '1rem',
-};
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import shadowStyles from '!!raw-loader!./Shadow.module.css';
 
 export const Container: FC = () => {
   return (
@@ -25,9 +16,10 @@ export const Container: FC = () => {
       </section>
       <section>
         <root.div className="quote">
+          <style type="text/css">{shadowStyles}</style>
           <div className="blender-container">
             <div style={{ overflow: 'hidden', clear: 'both' }}>
-              <Blender id="Framed-Blender" blenderStyles={shadowBlenderStyles} />
+              <Blender id="Framed-Blender" />
             </div>
           </div>
         </root.div>

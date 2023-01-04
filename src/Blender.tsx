@@ -1,14 +1,11 @@
-import { CSSProperties, FC, useState } from 'react';
+import { FC, useState } from 'react';
 import { useDrag, useDrop } from 'react-dnd';
 import { ColorProps } from './Color';
 
 import { ItemTypes } from './ItemTypes';
 import blendColors from './utils';
 
-export const Blender: FC<{ id: string; blenderStyles?: CSSProperties }> = ({
-  id,
-  blenderStyles,
-}) => {
+export const Blender: FC<{ id: string }> = ({ id }) => {
   const [blendedColor, setBlendedColor] = useState('#222');
 
   const [{ canDrop, isOver }, drop] = useDrop(
@@ -48,11 +45,7 @@ export const Blender: FC<{ id: string; blenderStyles?: CSSProperties }> = ({
 
   return (
     <div ref={drop}>
-      <div
-        ref={drag}
-        style={{ ...blenderStyles, backgroundColor: blendedColor }}
-        className="blender"
-      >
+      <div ref={drag} style={{ backgroundColor: blendedColor }} className="blender">
         {textContent}
       </div>
     </div>
