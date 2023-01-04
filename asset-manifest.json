@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.e51ca370.css",
-    "main.js": "/static/js/main.419fd7a2.js",
-    "index.html": "/index.html",
-    "main.e51ca370.css.map": "/static/css/main.e51ca370.css.map",
-    "main.419fd7a2.js.map": "/static/js/main.419fd7a2.js.map"
+    "main.css": "/react-shadow-dnd-example/static/css/main.e51ca370.css",
+    "main.js": "/react-shadow-dnd-example/static/js/main.419fd7a2.js",
+    "index.html": "/react-shadow-dnd-example/index.html",
+    "main.e51ca370.css.map": "/react-shadow-dnd-example/static/css/main.e51ca370.css.map",
+    "main.419fd7a2.js.map": "/react-shadow-dnd-example/static/js/main.419fd7a2.js.map"
   },
   "entrypoints": [
     "static/css/main.e51ca370.css",
