@@ -5,20 +5,10 @@ import { ColorProps } from './Color';
 import { ItemTypes } from './ItemTypes';
 import blendColors from './utils';
 
-const style: CSSProperties = {
-  height: '12rem',
-  width: '12rem',
-  marginRight: '1.5rem',
-  marginBottom: '1.5rem',
-  color: 'white',
-  padding: '1rem',
-  textAlign: 'center',
-  fontSize: '1rem',
-  lineHeight: 'normal',
-  float: 'left',
-};
-
-export const Blender: FC<{ id: string }> = ({ id }) => {
+export const Blender: FC<{ id: string; blenderStyles?: CSSProperties }> = ({
+  id,
+  blenderStyles,
+}) => {
   const [blendedColor, setBlendedColor] = useState('#222');
 
   const [{ canDrop, isOver }, drop] = useDrop(
@@ -58,7 +48,11 @@ export const Blender: FC<{ id: string }> = ({ id }) => {
 
   return (
     <div ref={drop}>
-      <div ref={drag} style={{ ...style, backgroundColor: blendedColor }}>
+      <div
+        ref={drag}
+        style={{ ...blenderStyles, backgroundColor: blendedColor }}
+        className="blender"
+      >
         {textContent}
       </div>
     </div>
